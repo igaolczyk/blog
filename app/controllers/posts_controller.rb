@@ -27,8 +27,6 @@ class PostsController < ApplicationController
   # POST /posts.json
   def create
     @post = current_user.posts.create(post_params)
-    puts "^"*100
-    puts @post
     
       @post.save
       redirect_to root_path 
